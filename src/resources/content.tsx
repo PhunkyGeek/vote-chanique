@@ -95,7 +95,7 @@ const vote: Vote = {
         <strong className="ml-4">Get Free</strong>{" "}
         <Line background="brand-alpha-strong" vert height="20" />
         <Text marginRight="4" onBackground="brand-medium">
-          Udemy Course on Personal Development
+          Course on Personal Development
         </Text>
       </Row>
     ),
