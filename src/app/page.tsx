@@ -12,7 +12,6 @@ import {
   Line,
 } from "@once-ui-system/core";
 import { home, vote, about, person, baseURL, routes } from "@/resources";
-import VoteButton from "@/components/VoteButton";
 import { Mailchimp } from "@/components";
 import { Projects } from "@/components/work/Projects";
 import { Posts } from "@/components/blog/Posts";
@@ -101,9 +100,27 @@ export default function Home() {
             {/* <span style={{ margin: "0 8px" }}></span> */}
           </RevealFx>
           <RevealFx paddingTop="12" delay={0.4} horizontal="center" paddingLeft="12">
-            <VoteButton href={home.featured.href} id="vote">
-              {home.featured.title}
-            </VoteButton>
+            <Button
+              id="vote"
+              data-border="rounded"
+              href={home.featured.href}
+              variant="secondary"
+              size="m"
+              weight="default"
+              arrowIcon
+            >
+              <Row gap="8" vertical="center" paddingRight="4">
+                {about.avatar.display && (
+                  <Avatar
+                    marginRight="8"
+                    style={{ marginLeft: "-0.75rem" }}
+                    src={person.avatar}
+                    size="m"
+                  />
+                )}
+                {home.featured.title}
+              </Row>
+            </Button>
           </RevealFx>
           <RevealFx paddingTop="12" delay={0.4} horizontal="center" paddingLeft="12">
             <Button
